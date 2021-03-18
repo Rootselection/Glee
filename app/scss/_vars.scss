@@ -1,6 +1,7 @@
 $title-blue: #243f4d;
 $title-black: #191919;
 $text-black: #262626;
+$text-gray: #8b8b8b;
 $header-text: #436372;
 $title-footer: #1f2044;
 $text-footer: #7b7b7b;
@@ -47,4 +48,11 @@ $main-btn: #a3bbc8;
 %poppins-400 {
     font-family: 'Poppins-Bold', sans-serif;
     font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }

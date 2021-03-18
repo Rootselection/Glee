@@ -22,3 +22,9 @@ body {
 a {
     text-decoration: none;
 }
+
+.title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: $title-black;
+}

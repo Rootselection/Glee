@@ -329,11 +329,13 @@
 .main {
 }
 .top-slider {
+    max-width: 1770px;
+    margin: 0 auto;
     background-color: $main-bg;
     background-image: url('../images/slider-bg.png');
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 95% 50%;
+    background-position: 95% 20%;
 		// .top-slider__inner
 
         &__container {
@@ -402,8 +404,57 @@
             z-index: 20;
             margin-left: 110px;
 		}
+    
+            &__bottom {
+                background-color: #fef7f0;
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
 
-
+            &__bottom-inner {
+                max-width: 1470px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+            }
+    
+            // .top-slider__bottom-item
+    
+            &__bottom-item {
+                display: flex;
+                align-items: flex-start;
+            }
+    
+            // .top-slider__bottom-img
+    
+            &__bottom-img {
+                margin-right: 24px;
+            }
+    
+            // .top-slider__bottom-content
+    
+            &__bottom-content {
+            }
+    
+            // .top-slider__bottom-title
+    
+            &__bottom-title {
+                @extend %dmsans-700;
+                margin-bottom: 14px;
+                font-size: 18px;
+                color: #414141;
+            }
+    
+            // .top-slider__bottom-text
+    
+            &__bottom-text {
+                @extend %dmsans-400;
+                max-width: 200px;
+                font-size: 16px;
+                line-height: 30px;
+                color: #585858;
+            }
+    
 
 
 
@@ -439,6 +490,217 @@
         }
     }
 }
+
+.trend-products {
+    background-color: #f9f9f9;
+    padding-top: 75px;
+    padding-bottom: 85px;
+    text-align: center;
+    // .trend-products__title
+
+    &__wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-bottom: 38px;
+    }
+
+    // .trend-products__panel
+
+    &__panel {
+        margin-bottom: 82px;
+    }
+
+    // .trend-products__panel-link
+
+    &__panel-link {
+        border: none;
+        outline: none;
+        color: $text-gray;
+        background-color: transparent;
+        @extend %dmsans-700;
+        cursor: pointer;
+    }
+
+    &__panel-link + &__panel-link {
+        margin-left: 10px;
+    }
+
+    .mixitup-control-active {
+        color: $title-black;
+    }
+
+    // .trend-products__inner
+
+    &__inner {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+
+    // .trend-products__item
+
+    &__item {
+        background-color: #fff;
+        width: 270px;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-position: center 54px;
+        background-size: auto;
+        position: relative;
+    }
+
+    &__item--hover {
+        display: none;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item--hover svg {
+        fill: $main-btn;
+    }
+
+    &__item:hover &__item--hover {
+        display: flex;
+    }
+
+    &__item-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: all .2s;
+        box-shadow: 0 0 10px #8b8b8b;
+    }
+
+    &__item-link + &__item-link {
+        margin-left: 16px;
+    }
+
+    &__item-link:hover {
+        background-color: $main-btn;
+    }
+
+    &__item-link:active {
+        background-color: darken($main-btn, 20%);
+    }
+
+    &__item-link:hover svg {
+        fill: #fff;
+    }
+
+    // .trend-products__item-link
+
+    &__item-link {
+    }
+
+    // .trend-products__item-title
+
+    &__item-title {
+        @extend %dmsans-700;
+        color: #000;
+        color: $title-blue;
+        margin-bottom: 18px;
+    }
+
+    // .trend-products__item-price
+
+    &__item-price {
+        display: block;
+        @extend %dmsans-700;
+        color: $main-btn;
+        margin-bottom: 38px;
+    }
+
+		// .trend-products__wrapper
+
+		&__special {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 184px;
+		}
+
+		// .trend-products__special-item
+
+		&__special-item {
+            background-color: #feefe2;
+            max-width: 870px;
+            height: 390px;
+            display: flex;
+            position: relative;
+            width: 50%;
+		}
+
+        &__special-item + &__special-item {
+            margin-left: 30px;
+        }
+		// .trend-products__special-img
+
+		&__special-img {
+            // margin-left: 140px;
+            position: absolute;
+            top: -25%;
+            left: 10%;
+		}
+
+		// .trend-products__special-content
+
+		&__special-content {
+            margin-left: 325px;
+            text-align: left;
+            margin-top: 100px;
+            color: $title-blue;
+            margin-right: 10px;
+		}
+
+		// .trend-products__special-title
+
+		&__special-title {
+            @extend %dmsans-700;
+            font-size: 26px;
+            margin-bottom: 32px;
+            max-width: 250px;
+		}
+
+		// .trend-products__special-text
+
+		&__special-text {
+            @extend %rubik-400;
+            line-height: 30px;
+            max-width: 346px;
+            margin-bottom: 38px;
+		}
+
+		// .trend-products__special-link
+
+		&__special-link {
+            display: inline-block;
+            color: $title-blue;
+            @extend %rubik-400;
+            font-size: 15px;
+            line-height: 12px;
+            padding: 20px;
+            border: 1px solid #b3b7b5;
+            border-radius: 5px;
+		}
+
+        &__special-link svg {
+            margin-left: 46px;
+        }
+
+}
+
 
 
 

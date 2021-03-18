@@ -5,3 +5,7 @@ $('.top-slider__inner').slick({
    autoplay: true,
    autoplaySpeed: 2000
 });
+
+$(function(){
+   var mixer = mixitup('.trend-products__inner');
+});
