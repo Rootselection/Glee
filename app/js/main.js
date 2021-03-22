@@ -8,4 +8,5 @@ $('.top-slider__inner').slick({
 
 $(function(){
    var mixer = mixitup('.trend-products__inner');
+   var mixer = mixitup('.new-products__inner');
 });
